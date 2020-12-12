@@ -5,5 +5,14 @@ class FamilyMembersController < ApplicationController
         erb :"familymembers/index"
     end 
 
+    get '/familymembers/:id' do 
+        @familymember = FamilyMember.find_by(id: params[:id]) 
+        if @familymember 
+            erb :"familymembers/show"
+        else 
+            redirect "/familymembers"
+        end 
+    end 
+
 
 end 
