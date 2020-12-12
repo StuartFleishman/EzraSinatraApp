@@ -5,6 +5,22 @@ class FamilyMembersController < ApplicationController
         erb :"familymembers/index"
     end 
 
+    get '/familymembers/new' do 
+        erb :"familymembers/new"
+    end 
+
+    post '/familymembers' do 
+        FamilyMember.create(params)
+        redirect '/familymembers'
+    end 
+
+    get '/familymembers/:id/edit' do 
+        @familymember = FamilyMember.find_by(id: params[:id]) 
+        erb :"familymembers/edit"
+    end 
+    
+    
+    
     get '/familymembers/:id' do 
         @familymember = FamilyMember.find_by(id: params[:id]) 
         if @familymember 

@@ -2,3 +2,5 @@
 <ul><% @familymembers.each do |family|%>
     <li><a href="/familymembers/<%=family.id%>"> <%= family.name %> </a> </li>
 <% end %></ul>
+
+<a href="familymembers/new"> add a family member </a>
