@@ -14,13 +14,6 @@ class FamilyMembersController < ApplicationController
         redirect '/familymembers'
     end 
 
-    get '/familymembers/:id/edit' do 
-        @familymember = FamilyMember.find_by(id: params[:id]) 
-        erb :"familymembers/edit"
-    end 
-    
-    
-    
     get '/familymembers/:id' do 
         @familymember = FamilyMember.find_by(id: params[:id]) 
         if @familymember 
@@ -29,6 +22,21 @@ class FamilyMembersController < ApplicationController
             redirect "/familymembers"
         end 
     end 
+
+    get '/familymembers/:id/edit' do 
+        @familymember = FamilyMember.find_by(id: params[:id])
+        erb :"familymembers/edit"
+    end 
+
+    patch '/familymembers/:id' do  
+        @familymember = FamilyMember.find_by(id: params[:id])
+        @familymember.update(params[:familymember])
+        redirect to "/familymembers/#{@familymember.id}"
+    end 
+    
+    
+    
+
 
 
 end 

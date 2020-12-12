@@ -1,0 +1,11 @@
+<h1>Edit</h1>
+<%=  @familymember.name %>
+
+<form method="POST" action="/familymembers/<%=@familymember.id %>">
+<input type="hidden" value="PATCH" name="_method">
+<input type="text" name="familymember[name]" value="<%= @familymember.name%>">
+<input type="text" name="familymember[relationship]" value="<%= @familymember.relationship%>">
+<input type="date" name="familymember[birthdate]" value="<%= @familymember.birthdate%>">
+<input type="submit" value="edit">
+</form>
+
