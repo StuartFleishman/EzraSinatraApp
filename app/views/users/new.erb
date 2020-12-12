@@ -1,7 +1,7 @@
 <h1>Signup</h1>
 <form action = '/signup' method = "POST">
-<label for="user">UserName: </label> <input type="text" name="username" id="user">
-<label for="email">Email: </label> <input type="email" name="email" id="email">
-<label for="pword">Password: </label> <input type="password" name="password" id="pword">
+<label for="user">UserName: </label> <input type="text" name="user[user_name]" id="user" required>
+<label for="email">Email: </label> <input type="email" name="user[email]" id="email" required>
+<label for="pword">Password: </label> <input type="password" name="user[password]" id="pword" required>
 <input type="submit" value="SignUp">
 </form>
