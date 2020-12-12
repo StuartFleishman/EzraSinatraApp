@@ -1,0 +1,6 @@
+<h1>Family Members </h1>
+<ul><% @familymembers.each do |family|%>
+    <li><%= family.name %></li>
+    <li><%= family.relationship %></li>
+    <li><%= family.birthdate %></li>
+<% end %></ul>
