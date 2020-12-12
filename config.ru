@@ -6,4 +6,5 @@ end
 
 
 use UsersController 
+use FamilyMembersController
 run ApplicationController
