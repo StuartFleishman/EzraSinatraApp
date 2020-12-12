@@ -5,3 +5,8 @@
 
 <a href = "/familymembers/<%=@familymember.id%>/edit"> edit </a>
 
+<form method="POST" action="/familymembers/<%=@familymember.id %>">
+<input type="hidden" value="DELETE" name="_method">
+<input type="submit" value="delete">
+</form>
+

@@ -33,6 +33,13 @@ class FamilyMembersController < ApplicationController
         @familymember.update(params[:familymember])
         redirect to "/familymembers/#{@familymember.id}"
     end 
+
+    delete '/familymembers/:id' do 
+        @familymember = FamilyMember.find_by(id: params[:id])
+        @familymember.destroy 
+        redirect '/familymembers'
+    end 
+
     
     
     
