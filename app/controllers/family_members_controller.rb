@@ -25,19 +25,31 @@ class FamilyMembersController < ApplicationController
 
     get '/familymembers/:id/edit' do 
         @familymember = FamilyMember.find_by(id: params[:id])
-        erb :"familymembers/edit"
+        if @familymember.user == current_user
+            erb :"familymembers/edit"
+        else  
+            redirect to '/familymembers'
+        end 
     end 
 
     patch '/familymembers/:id' do  
         @familymember = FamilyMember.find_by(id: params[:id])
-        @familymember.update(params[:familymember])
-        redirect to "/familymembers/#{@familymember.id}"
+        if @familymember.user == current_user
+            @familymember.update(params[:familymember])
+            redirect to "/familymembers/#{@familymember.id}"
+        else  
+            redirect to '/familymembers'
+        end 
     end 
 
     delete '/familymembers/:id' do 
         @familymember = FamilyMember.find_by(id: params[:id])
-        @familymember.destroy 
-        redirect '/familymembers'
+        if @familymember.user == current_user
+            @familymember.destroy 
+            redirect '/familymembers'
+        else  
+            redirect to '/familymembers'
+        end 
     end 
 
     
