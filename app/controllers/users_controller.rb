@@ -15,11 +15,4 @@ class UsersController < ApplicationController
         end 
      end 
 
-     get '/login' do 
-     end 
-
-     get '/logout' do 
-        session.clear 
-        redirect to '/login'
-     end 
 end 
