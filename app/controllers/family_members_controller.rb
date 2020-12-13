@@ -10,7 +10,7 @@ class FamilyMembersController < ApplicationController
     end 
 
     post '/familymembers' do 
-        FamilyMember.create(params)
+        familymember = current_user.family_members.create(params)
         redirect '/familymembers'
     end 
 
