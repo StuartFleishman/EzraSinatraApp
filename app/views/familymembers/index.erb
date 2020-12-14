@@ -1,8 +1,7 @@
-<h1>Family Members </h1>
+<h1 class="center">Family Members </h1>
 <ol><% @current_user.each do |family|%>
     <li><a href="/familymembers/<%=family.id%>"> <%= family.name %> </a> </li>
 <% end %></ol>
 <br>
-<a href="familymembers/new"> add a family member </a> <br>
-<br>
-<a href='/logout'>log out </a>
+<a href="familymembers/new" class="btn light-blue lighten-3"><i class="material-icons">person</i>Add a Family Member</a><br>
+
