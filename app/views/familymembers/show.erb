@@ -1,12 +1,14 @@
-<%= @familymember.name %>
-<%= @familymember.relationship %>
-<%= @familymember.birthdate %>
+Name: <%= @familymember.name %> <br>
+Relationship: <%= @familymember.relationship %> <br>
+Birthdate: <%= @familymember.birthdate %> <br>
 
 
-<a href = "/familymembers/<%=@familymember.id%>/edit"> edit </a>
+<a href = "/familymembers/<%=@familymember.id%>/edit" class="btn"><i class="material-icons">edit</i>Edit </a> <br>
+<a href = "/familymembers"> Home </a><br>
 
 <form method="POST" action="/familymembers/<%=@familymember.id %>">
 <input type="hidden" value="DELETE" name="_method">
 <input type="submit" value="delete">
-</form>
+</form> <br>
+<a href='/logout'>log out </a>
 

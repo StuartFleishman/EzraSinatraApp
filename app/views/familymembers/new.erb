@@ -1,7 +1,17 @@
 <h1>Create a Family Member</h1>
+<i class="large material-icons">person</i>
 <form action = '/familymembers' method = "POST">
-<label for="name">Name: </label> <input type="text" name="name" id="name" required>
-<label for="relationship">Relationship: </label> <input type="text" name="relationship" id="relationship" required>
-<label for="bdate">BirthDate: </label> <input type="date" name="birthdate" id="bdate" required>
-<input type="submit" value="create">
+ <div class="input-field">
+    <label for="name">Name: </label> 
+    <input type="text" name="name" id="name" required>
+ </div>
+ <div class="input-field">
+    <label for="relationship">Relationship: </label> 
+    <input type="text" name="relationship" id="relationship" required>
+</div>
+<div>
+    <label for="bdate">BirthDate: </label> 
+    <input type="date" name="birthdate" id="bdate" required>
+</div>
+<input type="submit" value="create" class="btn light-blue lighten-3">
 </form>

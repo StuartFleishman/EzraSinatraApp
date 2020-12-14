@@ -1,8 +1,16 @@
-<h1>Signup</h1>
-<%= @erros %>
+<h1 class="center light-blue-text text-lighten-3">Signup</h1>
+<span style="color:red"><%= @erros %></span><br>
 <form action = '/signup' method = "POST">
-<label for="user">UserName: </label> <input type="text" name="user[user_name]" id="user" required>
-<label for="email">Email: </label> <input type="email" name="user[email]" id="email" required>
-<label for="pword">Password: </label> <input type="password" name="user[password]" id="pword" required>
-<input type="submit" value="SignUp">
+ <div class="input-field">
+    <label for="user">UserName: </label> 
+    <input type="text" name="user[user_name]" id="user" required>
+ </div>
+ <div class="input-field">
+    <label for="email">Email: </label> 
+    <input type="email" name="user[email]" id="email" required>
+ </div>
+  <div class="input-field">
+    <label for="pword">Password: </label> <input type="password" name="user[password]" id="pword" required>
+    <input type="submit" value="SignUp" class="btn light-blue lighten-3">
+ </div>
 </form>

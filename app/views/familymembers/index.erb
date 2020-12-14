@@ -1,6 +1,8 @@
 <h1>Family Members </h1>
-<ul><% @familymembers.each do |family|%>
+<ol><% @current_user.each do |family|%>
     <li><a href="/familymembers/<%=family.id%>"> <%= family.name %> </a> </li>
-<% end %></ul>
-
-<a href="familymembers/new"> add a family member </a>
+<% end %></ol>
+<br>
+<a href="familymembers/new"> add a family member </a> <br>
+<br>
+<a href='/logout'>log out </a>
