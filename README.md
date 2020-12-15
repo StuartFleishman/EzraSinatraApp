@@ -15,7 +15,7 @@ run shotgun
 
 User.create # returns a new user
 FamilyMember.create # returns a new family member
-User.Family_members.create # returns a family member asociated with the User 
+User.Family_members.create # returns a family member associated with the User 
 ```
 
 ## Contributing
