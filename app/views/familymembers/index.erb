@@ -1,5 +1,6 @@
-<h1 class="center">Family Members </h1>
+<h1 class="center light-blue-text text-lighten-3">Family Members </h1>
 <ol><% @current_user.each do |family|%>
+
     <li><a href="/familymembers/<%=family.id%>"> <%= family.name %> </a> </li>
 <% end %></ol>
 <br>

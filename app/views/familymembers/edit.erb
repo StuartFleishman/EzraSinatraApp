@@ -1,10 +1,20 @@
-<h1>Edit</h1>
-<%=  @familymember.name %>
+<h1 class="center light-blue-text text-lighten-3">Edit</h1>
+
 <form method="POST" action="/familymembers/<%=@familymember.id %>">
 <input type="hidden" value="PATCH" name="_method">
+
+<div class="input-field">
+<label for="name">Name: </label> 
 <input type="text" name="familymember[name]" value="<%= @familymember.name%>">
+</div>
+<div class="input-field">
+<label for="name">Relationship: </label> 
 <input type="text" name="familymember[relationship]" value="<%= @familymember.relationship%>">
+</div>
+<div class="input-field">
+<label for="name">Birthdate: </label> 
 <input type="date" name="familymember[birthdate]" value="<%= @familymember.birthdate%>">
-<input type="submit" value="save">
+<input type="submit" value="save" class="btn light-blue lighten-3">
+</div>
 </form>
 

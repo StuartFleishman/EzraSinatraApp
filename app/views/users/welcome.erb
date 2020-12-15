@@ -1,6 +1,5 @@
 <% if logged_in? %>
-    <h1> Hi! You are logged in as <%= current_user.user_name %> </h1>
+    <h1 class="center light-blue-text text-lighten-3"> Hi! You are logged in as <%= current_user.user_name %> </h1>
 <% end %>
 
-<a href="familymembers/new"> Add a Family Member </a><br>
-<a href="/logout">Log out here</a>
+<a href="familymembers/new" class="btn light-blue lighten-3"><i class="material-icons">person</i>Add a Family Member</a>

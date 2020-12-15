@@ -11,6 +11,9 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem 'tux'
+gem 'pony', '~> 1.11'
+gem 'excon'
+gem 'json'
 
 group :test do
   gem 'rspec'

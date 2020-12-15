@@ -21,10 +21,10 @@
   <body>
     <nav class="light-blue lighten-3">
       <div class="container">
-        <a href="/" class="brand-logo"><i class="material-icons">favorite</i>Home</a>
           <ul class="right">
             <% if logged_in? %>
-              <li> <a href="/logout">Logout</a></li>
+              <a href="/familymembers" class="left"><i class="material-icons">favorite</i>Home</a>
+              <li> <a href="/logout" class="right">Logout</a></li>
             <% else %>
               <li> <a href="/signup">SignUp</a></li>
               <li> <a href="/login">LogIn</a></li>
