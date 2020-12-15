@@ -1,10 +1,7 @@
 class FamilyMembersController < ApplicationController 
 
     get '/familymembers' do 
-        # @familymember = FamilyMember.find_by(id: params[:id])
-        # if @familymember.user == @current_user
-        # # @familymembers = FamilyMember.all
-            @current_user = current_user.family_members.all 
+        @current_user = current_user.family_members.all 
         erb :"familymembers/index"
     end 
 
