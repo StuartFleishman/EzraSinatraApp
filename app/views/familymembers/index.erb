@@ -1,8 +1,10 @@
 <h1 class="center light-blue-text text-lighten-3">Family Members </h1>
-<ol><% @current_user.each do |family|%>
+<h5>
+<ol><% @current_users_family_members.each do |family|%>
 
     <li><a href="/familymembers/<%=family.id%>"> <%= family.name %> </a> </li>
-<% end %></ol>
+<% end %></ol> 
+</h5>
 <br>
-<a href="familymembers/new" class="btn light-blue lighten-3"><i class="material-icons">person</i>Add a Family Member</a><br>
+<a href="familymembers/new" class="fun btn light-blue lighten-3"><i class="material-icons">person</i>Add a Family Member</a><br>
 

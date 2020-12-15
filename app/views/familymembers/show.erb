@@ -3,12 +3,12 @@ Relationship: <%= @familymember.relationship %> <br>
 Birthdate: <%= @familymember.birthdate %> <br>
 
 
-<a href = "/familymembers/<%=@familymember.id%>/edit" class="btn light-blue lighten-3"><i class="material-icons">edit</i>Edit </a><br>
+<a href = "/familymembers/<%=@familymember.id%>/edit" class="fun btn light-blue lighten-3"><i class="material-icons">edit</i>Edit </a><br>
 
 <div style="margin-top: 15px" >
 <form method="POST" action="/familymembers/<%=@familymember.id %>">
 <input type="hidden" value="DELETE" name="_method">
-<input type="submit" value="delete" class="btn light-blue lighten-3">
+<input type="submit" value="delete" class="fun btn light-blue lighten-3">
 </form>
 </div>
 

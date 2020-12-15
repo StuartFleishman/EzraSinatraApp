@@ -1,7 +1,7 @@
 class FamilyMembersController < ApplicationController 
 
     get '/familymembers' do 
-        @current_user = current_user.family_members.all 
+        @current_users_family_members = current_user.family_members
         erb :"familymembers/index"
     end 
 
