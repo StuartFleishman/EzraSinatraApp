@@ -10,8 +10,14 @@ class FamilyMembersController < ApplicationController
     end 
 
     post '/familymembers' do 
-        familymember = current_user.family_members.create(params)
-        redirect '/familymembers'
+        # add validations, make a new instance and save 
+        @familymember = current_user.family_members.create(params)
+        if @familymember.save
+            redirect '/familymembers'
+        else  
+            @errors = @familymember.errors.full_messages.join(" - ") 
+            erb :"familymembers/new"
+        end 
     end 
 
     get '/familymembers/:id' do 

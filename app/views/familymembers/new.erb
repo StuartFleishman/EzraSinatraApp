@@ -1,17 +1,18 @@
 <h1 class="center light-blue-text text-lighten-3">Create a Family Member</h1>
+<span style="color:red"><%= @errors%></span>
 <i class="large material-icons">person</i>
 <form action = '/familymembers' method = "POST">
  <div class="input-field">
     <label for="name">Name: </label> 
-    <input type="text" name="name" id="name" required>
+    <input type="text" name="name" id="name" >
  </div>
  <div class="input-field">
     <label for="relationship">Relationship: </label> 
-    <input type="text" name="relationship" id="relationship" required>
+    <input type="text" name="relationship" id="relationship" >
 </div>
 <div>
     <label for="bdate">BirthDate: </label> 
-    <input type="date" name="birthdate" id="bdate" required>
+    <input type="date" name="birthdate" id="bdate" >
 </div>
 <input type="submit" value="create" class="btn light-blue lighten-3">
 </form>

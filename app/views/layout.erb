@@ -29,7 +29,14 @@
               <li> <a href="/signup">SignUp</a></li>
               <li> <a href="/login">LogIn</a></li>
             <% end %>
-        </ul>
+          </ul>
+          <ul class="left">
+            <% if logged_in? %>
+              <li> <%= current_user.user_name %> </li>
+            <% else %>
+              <li> <i class="material-icons">cake</i></li>
+            <% end %>
+          </ul>
       </div>
     </nav>
     <div class="wrapper">
@@ -37,7 +44,7 @@
         <%= yield %>
 
       <footer class="branding">
-        <small>&copy; 2020 <strong>Ezra</strong></small>
+        <small>&copy; 2020 <strong>Ezra</strong></small> 
       </footer>
     </div>
 

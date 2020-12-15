@@ -8,9 +8,9 @@ class UsersController < ApplicationController
         @user = User.new(params[:user])
         if @user.save
             session[:user_id] = @user.id 
-            erb :'users/welcome' 
+            redirect to '/familymembers' 
         else 
-            @erros = @user.errors.full_messages.join(" - ")    
+            @errors = @user.errors.full_messages.join(" - ")    
             erb :'users/new' 
         end 
      end 
