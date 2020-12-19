@@ -10,7 +10,6 @@ class FamilyMembersController < ApplicationController
     end 
 
     post '/familymembers' do 
-        # add validations, make a new instance and save 
         @familymember = current_user.family_members.create(params)
         if @familymember.save
             redirect '/familymembers'
