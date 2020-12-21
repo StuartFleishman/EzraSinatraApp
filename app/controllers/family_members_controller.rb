@@ -15,7 +15,7 @@ class FamilyMembersController < ApplicationController
             redirect '/familymembers'
         else  
             @errors = @familymember.errors.full_messages.join(" - ") 
-            redirect 'familymembers/new'
+            erb :"familymembers/new"
         end 
     end 
 
